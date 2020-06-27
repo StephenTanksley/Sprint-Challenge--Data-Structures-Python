@@ -12,6 +12,7 @@ class Node:
     def set_next(self, new_next):
         self.next_node = new_next
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -39,4 +40,24 @@ class LinkedList:
         return False
 
     def reverse_list(self, node, prev):
-        pass
+
+        # # First case. Head value is none.
+        if self.head == None:
+            return None
+
+        # # Second case - only one node in the linked list.
+        if self.head.next_node == None:
+            return self.head
+
+        # # Third case: We have more than one item in the list.
+        if node.next_node:
+            # this is where the recursion is happening.
+            self.reverse_list(node.next_node, node)
+
+        # # Break condition - we reach the end and there's no next node.
+        # Once self.head becomes our current node, we're all done.
+        if node.next_node == None:
+            self.head = node
+
+        # # This is where the pointers are switched.
+        node.next_node = prev
