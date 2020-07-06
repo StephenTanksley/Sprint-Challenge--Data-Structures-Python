@@ -147,3 +147,23 @@ print(f"runtime: {end_time - start_time} seconds")
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
+
+
+duplicated1 = set(names_1).intersection(names_2)
+duplicated2 = set(names_1) & set(names_2)
+
+print("duplicated names 1: ", duplicated1)
+print("duplicated length 1: ", len(duplicated1))
+
+print("duplicated names 2: ", duplicated2)
+print("duplicated length 2: ", len(duplicated2))
+
+# def has_duplicates(lst):
+#     return len(lst) != len(set(lst))
+
+
+# x = [1, 2, 3, 4, 4, 5, 6, 6]
+# y = [1, 2, 3, 4, 5, 6]
+
+# print("names_1 has duplicates: ", has_duplicates(names_1))
+# print("names_2 has duplicates: ", has_duplicates(names_2))
