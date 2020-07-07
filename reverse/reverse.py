@@ -56,4 +56,5 @@ class LinkedList:
             self.head = node
 
         # # This is where the pointers are switched.
+        # Prev is just a way of keeping track of where we came from.
         node.next_node = prev
