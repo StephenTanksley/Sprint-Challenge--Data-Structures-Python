@@ -41,15 +41,11 @@ class LinkedList:
 
     def reverse_list(self, node, prev):
 
-        # # First case. Head value is none.
-        if self.head == None:
-            return None
-
-        # # Second case - only one node in the linked list.
-        if self.head.next_node == None:
+        # # First case. Head value is none or is only value.
+        if self.head is None or self.head.next_node is None:
             return self.head
 
-        # # Third case: We have more than one item in the list.
+        # # Second case: We have more than one item in the list.
         if node.next_node:
             # this is where the recursion is happening.
             self.reverse_list(node.next_node, node)

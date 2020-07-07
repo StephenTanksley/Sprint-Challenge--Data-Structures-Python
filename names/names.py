@@ -128,16 +128,6 @@ for name in names_2:
         duplicates.append(name)
 
 
-# name_dict = {}
-
-# for name in names_1:
-#     name_dict[name].append(1)
-#     print(name_dict)
-
-# Experimenting with counters and dictionaries to keep track of multiple values.
-
-# A counter is going to keep track of how many times a specific key has occurred. However in my case, I tried it and it kept track of all the letters that showed up in each name.
-
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print(f"runtime: {end_time - start_time} seconds")
